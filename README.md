@@ -13,7 +13,7 @@ The library directory will hold your books & database.  addbooks will be used to
 /data/library
 /data/addbooks
 ```
-for the instructions below.  Just make sure you create it prior to starting the container.
+for the instructions below.  Just make sure you create them prior to starting the container.
 ### To run the container:
 ```sh
 docker run -v /data:/data -p 80:80 bcleonard/calibre-cops
