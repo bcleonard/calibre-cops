@@ -18,6 +18,10 @@ for the instructions below.  Just make sure you create them prior to starting th
 ```sh
 docker run -v /data:/data -p 80:80 bcleonard/calibre-cops
 ```
+### To access COPS:
+```sh
+http://<docker_host>/apps/
+```
 ### Notes:
 
 ### Issues:
