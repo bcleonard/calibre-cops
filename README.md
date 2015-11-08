@@ -18,5 +18,5 @@ for the instructions below.  Just make sure you create them prior to starting th
 ```sh
 docker run -v /data:/data -p 80:80 bcleonard/calibre-cops
 ```
-### Notes:
-
+### Issues:
+1) There currently is no way to remove books from the library.
