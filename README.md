@@ -10,13 +10,13 @@ addbooks
 ```
 The library directory will hold your books & database.  addbooks will be used to add books to your library on a periodic basis.  I used:
 ```sh
-/data/library
-/data/addbooks
+/home/books/data/library
+/home/books/data/addbooks
 ```
 for the instructions below.  Just make sure you create them prior to starting the container.
 ### To run the container:
 ```sh
-docker run -v /data:/data -p 80:80 bcleonard/calibre-cops
+docker run -d --name=primary -v /home/books/data:/data -p 80:80 bcleonard/calibre-cops
 ```
 ### To access COPS:
 ```sh
