@@ -34,4 +34,4 @@ http://<docker_host>/apps/
 ### Notes:
 
 ### Issues:
-1) There currently is no way to remove books from the library.
+1) none
