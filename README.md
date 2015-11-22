@@ -18,6 +18,10 @@ for the instructions below.  Just make sure you create them prior to starting th
 ```sh
 docker run -d --name=primary -v /home/books/data:/data -p 80:80 bcleonard/calibre-cops
 ```
+### To list books in the library:
+```sh
+docker run --rm=false -ti -v /home/books/data:/data bcleonard/calibre-cops /scripts/list-books.sh
+```
 ### To access COPS:
 ```sh
 http://<docker_host>/apps/
