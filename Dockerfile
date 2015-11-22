@@ -17,13 +17,11 @@ RUN git clone https://github.com/seblucas/cops.git /usr/share/nginx/html/apps/
 # add cops configuration
 ADD config_local.php /usr/share/nginx/html/apps/config_local.php 
 
-# add the startup.sh script
+# add the scripts
 ADD startup.sh /scripts/startup.sh
-RUN chmod 755 /scripts/startup.sh
-
-# add the list-books.sh script
 ADD list-books.sh /scripts/list-books.sh
-RUN chmod 755 /scripts/list-books.sh
+ADD remove-books.sh /scripts/remove-books.sh
+RUN chmod 755 /scripts/*.sh
 
 # Expose port
 EXPOSE 80
