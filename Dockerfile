@@ -14,13 +14,16 @@ RUN mkdir /usr/share/nginx/html/apps
 # add cops
 RUN git clone https://github.com/seblucas/cops.git /usr/share/nginx/html/apps/
 
-#
 # add cops configuration
 ADD config_local.php /usr/share/nginx/html/apps/config_local.php 
 
-# add the startup.sh
+# add the startup.sh script
 ADD startup.sh /scripts/startup.sh
 RUN chmod 755 /scripts/startup.sh
+
+# add the list-books.sh script
+ADD list-books.sh /scripts/list-books.sh
+RUN chmod 755 /scripts/list-books.sh
 
 # Expose port
 EXPOSE 80
