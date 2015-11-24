@@ -16,16 +16,16 @@ The library directory will hold your books & database.  addbooks will be used to
 for the instructions below.  Just make sure you create them prior to starting the container.
 ### To run the container:
 ```sh
-docker run -d --name=primary -v /home/books/data:/data -p 80:80 bcleonard/calibre-cops
+docker run -d --name=primary -v /home/books/data:/data:Z -p 80:80 bcleonard/calibre-cops
 ```
 ### To list books in the library:
 ```sh
-docker run --rm=false -ti -v /home/books/data:/data bcleonard/calibre-cops /scripts/list-books.sh
+docker run --rm=false -ti -v /home/books/data:/data:Z bcleonard/calibre-cops /scripts/list-books.sh
 ```
 This will list all of the books in the library in the format "ID, Author, Title"
 ### To remove books in the library:
 ```sh
-docker run --rm=false -ti -v /home/books/data:/data bcleonard/calibre-cops /scripts/remove-books.sh -i ID
+docker run --rm=false -ti -v /home/books/data:/data:Z bcleonard/calibre-cops /scripts/remove-books.sh -i ID
 ```
 ### To access COPS:
 ```sh
