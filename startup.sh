@@ -17,4 +17,4 @@ crontab /scripts/crontab
 #
 # start nginx
 #
-/usr/sbin/nginx -g "daemon off;" -c /etc/nginx/nginx.conf
+/usr/sbin/nginx -g "daemon off;" -c /scripts/nginx.conf

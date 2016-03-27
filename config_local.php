@@ -24,3 +24,23 @@
      *  0 : disable
      */
     $config['cops_use_url_rewriting'] = "0";
+    /*
+     * Wich header to use when downloading books outside the web directory
+     * Possible values are :
+     *   X-Accel-Redirect   : For Nginx
+     *   X-Sendfile         : For Lightttpd or Apache (with mod_xsendfile)
+     *   No value (default) : Let PHP handle the download
+     */
+    $config['cops_x_accel_redirect'] = "X-Accel-Redirect";
+    /*
+     * Default timezone
+     * Check following link for other timezones :
+     * http://www.php.net/manual/en/timezones.php
+     */
+    $config['default_timezone'] = "America/New_York";
+    /*
+     * Update Epub metadata before download
+     * 1 : Yes (enable)
+     * 0 : No
+     */
+    $config['cops_update_epub-metadata'] = "1";
