@@ -31,7 +31,8 @@ docker run --rm=false -ti -v /home/books/data:/data:Z bcleonard/calibre-cops /sc
 ```sh
 http://<docker_host>/apps/
 ```
-### Notes:
-
+### Notes/Caveats/Issues:
+1.     This contain used to automatically run the add-books:q
+/Caveats/Issues
 ### Issues:
 1) none
