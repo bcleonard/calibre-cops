@@ -16,22 +16,6 @@
      * Catalog's title
      */
     $config['cops_title_default'] = "COPS";
-    
-    /*
-     * use URL rewriting for downloading of ebook in HTML catalog
-     * See README for more information
-     *  1 : enable
-     *  0 : disable
-     */
-    $config['cops_use_url_rewriting'] = "0";
-    /*
-     * Wich header to use when downloading books outside the web directory
-     * Possible values are :
-     *   X-Accel-Redirect   : For Nginx
-     *   X-Sendfile         : For Lightttpd or Apache (with mod_xsendfile)
-     *   No value (default) : Let PHP handle the download
-     */
-    $config['cops_x_accel_redirect'] = "X-Accel-Redirect";
     /*
      * Default timezone
      * Check following link for other timezones :
