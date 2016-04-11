@@ -41,6 +41,16 @@ docker run -d --name=calibre-cops -v /home/books/data:/data:Z -p 80:80 bcleonard
 http://<docker_host>/
 ```
 
+### COPS Options:
+
+I've added an environment variable called COPSLIBRARYNAME.  If you want to change the library name from "COPS" to something else, overwrite the variable by adding the following to your docker command line:
+
+```sh
+  --env COPSLIBARARYNAME="new_library_name"
+```
+
+I added this so you could run multiple contrainers on a single system and know which library you were viewing.
+
 ### Options
 
 Please see the documentation for the calibre (https://hub.docker.com/r/bcleonard/calibre/) for information regarding all of the options for the container.

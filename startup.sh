@@ -1,7 +1,13 @@
 #!/bin/bash
 
 #
+# update the cops library name
+#
+sed -i "s/COPS/${COPSLIBRARYNAME}/" /usr/share/nginx/html/cops/config_local.php 
+
+#
 # start php-fpm
+#
 /usr/sbin/php-fpm -D
 
 #

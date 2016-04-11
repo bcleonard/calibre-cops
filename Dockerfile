@@ -22,4 +22,7 @@ RUN chmod 755 /scripts/*.sh
 # Expose port
 EXPOSE 80
 
+# Set the COPS Library Name
+ENV COPSLIBRARYNAME=COPS
+
 CMD ["/scripts/startup.sh"]
