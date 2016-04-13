@@ -32,7 +32,7 @@ for the instructions below.  Just make sure you create them prior to starting th
 ### To run the container:
 
 ```sh
-docker run -d --name=calibre-cops -v /home/books/data:/data:Z -p 80:80 bcleonard/calibre-cops
+docker run -d --name=calibre-cops -v /home/books/data:/data -p 80:80 bcleonard/calibre-cops
 ```
 
 ### To access COPS:
