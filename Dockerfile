@@ -1,4 +1,4 @@
-FROM bcleonard/calibre:2016.5.31.1
+FROM bcleonard/calibre:2016.11.12.1
 MAINTAINER Bradley Leonard <bradley@stygianresearch.com> 
 
 # install calibre cronie
@@ -15,9 +15,17 @@ ADD config_local.php /usr/share/nginx/html/cops/config_local.php
 # add new nginx.conf
 ADD nginx.conf /scripts/nginx.conf
 
-# add the scripts
-ADD *.sh /scripts/
-RUN chmod 755 /scripts/*.sh
+# add list-books.sh
+ADD list-books.sh /scripts/
+RUN chmod 755 /scripts/list-books.sh
+
+# add remove-books.sh
+ADD remove-books.sh /scripts/
+RUN chmod 755 /scripts/remove-books.sh
+
+# add startup-cops.sh
+ADD startup-cops.sh /scripts/
+RUN chmod 755 /scripts/startup-cops.sh
 
 # Expose port
 EXPOSE 80
@@ -25,4 +33,4 @@ EXPOSE 80
 # Set the COPS Library Name
 ENV COPSLIBRARYNAME=COPS
 
-CMD ["/scripts/startup.sh"]
+CMD ["/scripts/startup-cops.sh"]
