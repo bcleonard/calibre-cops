@@ -52,10 +52,6 @@ describe "Dockerfile" do
     it { should be_mode 755 }
   end
 
-  describe file('/scripts/remove-books.sh') do
-    it { should be_mode 755 }
-  end
-
   describe file('/scripts/startup-cops.sh') do
     it { should be_mode 755 }
   end

@@ -20,8 +20,8 @@ ADD list-books.sh /scripts/
 RUN chmod 755 /scripts/list-books.sh
 
 # add remove-books.sh
-ADD remove-books.sh /scripts/
-RUN chmod 755 /scripts/remove-books.sh
+#ADD remove-books.sh /scripts/
+#RUN chmod 755 /scripts/remove-books.sh
 
 # add startup-cops.sh
 ADD startup-cops.sh /scripts/
