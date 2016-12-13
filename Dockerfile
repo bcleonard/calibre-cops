@@ -1,4 +1,4 @@
-FROM bcleonard/calibre:2016.11.12.1
+FROM bcleonard/calibre:2016.12.13.1
 MAINTAINER Bradley Leonard <bradley@stygianresearch.com> 
 
 # install calibre cronie

@@ -4,7 +4,8 @@ require "spec_helper"
 
 Docker.options[:read_timeout] = 900
 COPS_PORT = 80
-CALIBRE_VER = "2.60.0"
+CALIBRE_VER = "2.71.0"
+FEDORA_VER = 25
 DATA_DIR = "/tmp/data"
 
 describe "Dockerfile" do
@@ -20,11 +21,11 @@ describe "Dockerfile" do
   end
 
   it "installs the right version of fedora" do
-    expect(os_version).to include("Fedora release 24")
+    expect(os_version).to include("Fedora release #{FEDORA_VER}")
   end
 
   describe package("calibre") do
-    it { should be_installed.with_version('2.60.0') }
+    it { should be_installed.with_version("#{CALIBRE_VER}") }
   end
 
   describe package("nginx") do
