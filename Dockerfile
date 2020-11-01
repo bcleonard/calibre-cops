@@ -1,4 +1,4 @@
-FROM bcleonard/calibre:v2020.04.28.01
+FROM bcleonard/calibre:v2020.11.01.01
 MAINTAINER Bradley Leonard <bradley@leonard.pub> 
 
 # install calibre cronie
