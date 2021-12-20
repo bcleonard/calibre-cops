@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 FROM bcleonard/calibre:v2021.12.20.01
+=======
+FROM bcleonard/calibre:v2021.01.02.01
+>>>>>>> 06f6c1cebdf1c1285095fb7d625eda742fcfd2ce
 MAINTAINER Bradley Leonard <bradley@leonard.pub> 
 
 # install calibre cronie
