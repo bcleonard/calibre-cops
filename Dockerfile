@@ -54,6 +54,6 @@ RUN chmod 755 /scripts/startup-cops.sh
 EXPOSE 80
 
 # Set the COPS Library Name
-ENV COPSLIBRARYNAME=COPS
+#ENV COPSLIBRARYNAME=COPS
 
 CMD ["/scripts/startup-cops.sh"]

@@ -1,6 +1,14 @@
 #!/bin/bash
 
 #
+# determine cops library name
+#
+if [ -z "${COPSLIBRARYNAME}" ]
+then
+  COPSLIBRARYNAME="COPS"
+fi
+ 
+#
 # update the cops library name
 #
 sed -i "s/COPS/${COPSLIBRARYNAME}/" /usr/share/nginx/html/cops/config_local.php 
