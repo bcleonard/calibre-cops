@@ -1,4 +1,4 @@
-FROM bcleonard/calibre:v2021.12.29.01
+FROM bcleonard/calibre:v2022.07.10.01
 
 # set version labels
 ARG BUILD_DATE
