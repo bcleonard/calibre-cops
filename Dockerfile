@@ -1,10 +1,10 @@
-FROM bcleonard/calibre:v2022.07.10.01
+FROM bcleonard/calibre:v2023.09.09.01
 
 # set version labels
 ARG BUILD_DATE
 ARG VERSION
-ARG COPS_VERSION=1.1.3
-ARG COPS_URL="https://github.com/seblucas/cops/releases/download/${COPS_VERSION}/cops-${COPS_VERSION}.zip"
+ARG COPS_VERSION=1.5.0
+ARG COPS_URL="https://github.com/mikespub-org/seblucas-cops/releases/download/${COPS_VERSION}/cops-${COPS_VERSION}.zip"
 ARG COPS_DIR="/usr/share/nginx/html/cops"
 
 LABEL MAINTAINER bradley leonard <bradley@leonard.pub>
@@ -52,8 +52,5 @@ RUN chmod 755 /scripts/startup-cops.sh
 
 # Expose port
 EXPOSE 80
-
-# Set the COPS Library Name
-#ENV COPSLIBRARYNAME=COPS
 
 CMD ["/scripts/startup-cops.sh"]
