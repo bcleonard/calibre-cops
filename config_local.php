@@ -45,3 +45,9 @@
     /*
      * $config['cops_use_url_rewriting'] = "0";
      */
+
+    /*
+     * URL to access the COPS page
+     * $config['cops_full_url'] = '';
+     */
+

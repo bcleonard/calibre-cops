@@ -1,9 +1,9 @@
-FROM bcleonard/calibre:v2024.02.25.01
+FROM bcleonard/calibre:v2024.03.07.01
 
 # set version labels
 ARG BUILD_DATE
 ARG VERSION
-ARG COPS_VERSION=2.0.1
+ARG COPS_VERSION=2.4.1
 ARG COPS_URL="https://github.com/mikespub-org/seblucas-cops/releases/download/${COPS_VERSION}/cops-${COPS_VERSION}.zip"
 ARG COPS_DIR="/usr/share/nginx/html/cops"
 
@@ -42,12 +42,18 @@ ADD config_local.php /usr/share/nginx/html/cops/config_local.php
 # add new nginx.conf
 ADD nginx.conf /scripts/nginx.conf
 
+# add new fastcgi_params
+ADD fastcgi_params /scripts/fastcgi_params
+
+# add test.php
+#ADD test.php /usr/share/nginx/html/cops/test.php
+
 # add list-books.sh
-ADD list-books.sh /scripts/
+ADD list-books.sh /scripts/list-books.sh
 RUN chmod 755 /scripts/list-books.sh
 
 # add startup-cops.sh
-ADD startup-cops.sh /scripts/
+ADD startup-cops.sh /scripts/startup-cops.sh
 RUN chmod 755 /scripts/startup-cops.sh
 
 # Expose port

@@ -11,7 +11,7 @@ This docker container builds upon the calibre (https://hub.docker.com/r/bcleonar
 
 This contains the docker file and all necessary files to build a docker container for calibre with cops
 
-### Preperation
+## Preperation
 
 Before running the container, you'll need to have the following directories predefined on the container host:
 
@@ -29,19 +29,19 @@ The library directory will hold your books & database.  addbooks will be used to
 
 for the instructions below.  Just make sure you create them prior to starting the container.
 
-### To run the container:
+## To run the container:
 
 ```sh
 docker run -d --name=calibre-cops -v /home/books/data:/data -p 80:80 bcleonard/calibre-cops
 ```
 
-### To access COPS:
+## To access COPS:
 
 ```sh
 http://<docker_host>/
 ```
 
-### COPS Options:
+## COPS Options:
 
 I've added an environment variable called COPSLIBRARYNAME.  If you want to change the library name from "COPS" to something else, overwrite the variable by adding the following to your docker command line:
 
@@ -51,7 +51,7 @@ I've added an environment variable called COPSLIBRARYNAME.  If you want to chang
 
 I added this so you could run multiple contrainers on a single system and know which library you were viewing.
 
-### Options
+## Options
 
 Please see the documentation for the calibre (https://hub.docker.com/r/bcleonard/calibre/) for information regarding all of the options for the container.
 
@@ -67,9 +67,8 @@ To remove books from the library:
 docker exec calibre-cops /scripts/remove-books.sh -i <book_id>
 ```
 
-### Notes/Caveats/Issues:
+## Notes/Caveats/Issues:
 
-1.	Please see calibre (https://hub.docker.com/r/bcleonard/calibre/) for anything regarding the required container.
-2.	For all options in the required container, substibute "--name=calibre-cops" for "--name="calibre"
-3.      I recommend that you only pull versioned containers, not the latest.
-
+* Please see calibre (https://hub.docker.com/r/bcleonard/calibre/) for anything regarding the required container.
+* For all options in the required container, substibute "--name=calibre-cops" for "--name="calibre"
+* I recommend that you only pull versioned containers, not the latest.
