@@ -1,13 +1,13 @@
-FROM bcleonard/calibre:v2024.03.07.01
+FROM bcleonard/calibre:v2024.09.02.01
 
 # set version labels
-ARG BUILD_DATE
-ARG VERSION
-ARG COPS_VERSION=2.4.1
+ARG BUILD_DATE=09/02/2024
+ARG VERSION=v2024.09.02.01
+ARG COPS_VERSION=2.8.1
 ARG COPS_URL="https://github.com/mikespub-org/seblucas-cops/releases/download/${COPS_VERSION}/cops-${COPS_VERSION}.zip"
 ARG COPS_DIR="/usr/share/nginx/html/cops"
 
-LABEL MAINTAINER bradley leonard <bradley@leonard.pub>
+LABEL MAINTAINER="bradley leonard <bradley@leonard.pub>"
 
 RUN \
   echo "---===>>> prep system <<<===---" && \
