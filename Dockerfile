@@ -1,9 +1,9 @@
 FROM bcleonard/calibre:v2024.10.31.01
 
 # set version labels
-ARG BUILD_DATE=11/01/2024
-ARG VERSION=v2024.11.01.01
-ARG COPS_VERSION=2.8.1
+ARG BUILD_DATE=11/18/2024
+ARG VERSION=v2024.11.18.01
+ARG COPS_VERSION=3.2.2
 # ARG COPS_URL="https://github.com/mikespub-org/seblucas-cops/releases/download/${COPS_VERSION}/cops-${COPS_VERSION}.zip"
 ARG COPS_URL="https://github.com/mikespub-org/seblucas-cops/releases/download/${COPS_VERSION}/cops-${COPS_VERSION}-php82.zip"
 ARG COPS_DIR="/usr/share/nginx/html/cops"
@@ -38,7 +38,7 @@ RUN \
     /var/tmp/
 
 # add cops configuration
-ADD config_local.php /usr/share/nginx/html/cops/config_local.php 
+ADD config_local.php /usr/share/nginx/html/cops/config/local.php 
 
 # add new nginx.conf
 ADD nginx.conf /scripts/nginx.conf
