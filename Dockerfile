@@ -1,9 +1,9 @@
-FROM bcleonard/calibre:v2024.10.31.01
+FROM bcleonard/calibre:v2024.11.19.01
 
 # set version labels
-ARG BUILD_DATE=11/18/2024
-ARG VERSION=v2024.11.18.01
-ARG COPS_VERSION=3.2.2
+ARG BUILD_DATE=11/19/2024
+ARG VERSION=v2024.11.19.01
+ARG COPS_VERSION=3.4.5
 # ARG COPS_URL="https://github.com/mikespub-org/seblucas-cops/releases/download/${COPS_VERSION}/cops-${COPS_VERSION}.zip"
 ARG COPS_URL="https://github.com/mikespub-org/seblucas-cops/releases/download/${COPS_VERSION}/cops-${COPS_VERSION}-php82.zip"
 ARG COPS_DIR="/usr/share/nginx/html/cops"
